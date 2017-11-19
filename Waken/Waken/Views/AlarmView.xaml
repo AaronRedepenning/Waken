@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Waken.Views.AlarmView">
+    <ContentPage.Content>
+        <StackLayout
+            Orientation="Vertical"
+            Padding="10,5"
+            Spacing="10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="0" Text="Cancel" Clicked="OnCancelClicked" HorizontalOptions="Center"/>
+                <Button Grid.Column="1" Text="Save" Clicked="OnSaveClicked" HorizontalOptions="Center"/>
+            </Grid>
+            <TimePicker Time="{Binding Time}"/>
+            <Label Text="{Binding Name}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
